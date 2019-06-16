@@ -1,0 +1,28 @@
+class Solution {
+    public int numUniqueEmails(String[] emails) {
+        
+        HashSet<String> hs = new HashSet<>();
+        for(String mail : emails ){
+
+            //String[] splitted = mail.split("@"); 
+            String ln = mail.split("@")[0]; 
+            String dn = mail.split("@")[1];
+            
+            
+            //Ignore the "." and then ignore all character after +
+            ln = ln.replace(".","").split("\\+")[0];
+            //ignore all character after +
+            //ln = ln.split("\\+")[0];
+            
+            //System.out.println("local name : "+ln);
+            //System.out.println("domain name : "+dn); 
+            
+            String fullemail = ln.concat("@").concat(dn);
+            //System.out.println("Joined email "+ fullemail);
+            hs.add(fullemail);
+    }
+        
+        //System.out.println("Number of ellements "+hs.size());
+        return hs.size() ; 
+}
+}
