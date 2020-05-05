@@ -36,6 +36,9 @@ public class Solution {
                     || !map.containsKey(c))
 
                 return c;
+            
+            else
+                map.put(c,map.get(c)-1);
         }
         return '!';
     }
