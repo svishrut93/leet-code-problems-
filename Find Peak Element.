@@ -34,6 +34,7 @@ Solution {
             if (nums[i] > nums[i + 1])
                 return i;
         }
+        //Return index of last element, if the result is still not found.
         return nums.length - 1;
     }
 }
