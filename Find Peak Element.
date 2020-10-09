@@ -26,7 +26,8 @@ Notes : Three scenarios to consider for this particular question -
 2. Array has all elements in descending order. 
 3. Array has peak element somewhere in between. 
 
-
+//The Key here is that we only need to check every element with one element ahead of it. 
+//If the peak is not found, then it is obviously the last element. 
 
 Solution {
     public int findPeakElement(int[] nums) {
